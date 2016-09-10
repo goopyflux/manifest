@@ -1,0 +1,12 @@
+{{ $baseUrl := .Site.BaseURL }}
+<nav class="db dt-l w-100 border-box pa3 pa4-ns">
+{{ with .Site.Title }}
+<a class="db dtc-l v-mid link dark-gray dim f4 f2-l w-100 w-25-l tc tl-l mb2 mb0-l" href="{{ $.Site.BaseURL }}">{{ . | markdownify }}
+  </a>
+{{ end }}
+  <div class="db dtc-l v-mid w-100 w-75-l tc tr-l">
+  {{ range .Site.Menus.main }}
+  <a class="link dim dark-gray f6 f3-l dib mr3 mr4-l" href="{{ $baseUrl }}{{ .URL }}">{{ .Name }}</a>
+  {{ end }}
+  </div>
+</nav>

@@ -1,9 +1,9 @@
-<header>
-	{{ with .Title }}
-	<a class="link dim black b f1 f-headline-ns tc db mb3 mb4-ns" href="{{ $.Site.BaseURL }}">{{ . | markdownify }}</a>
-	{{ end }}
-	{{ with .Site.Params.subtitle }}
-	<h2 class="black b f2 tc db mb3 mb4-ns">{{ . | markdownify }}</h2>
-	{{ end }}
+<header class="pv3 pv4-ns">
+{{ with .Site.Params.title }}
+    <a class="link dim black f1 f-headline-ns tc db" href="{{ $.Site.BaseURL }}">{{ . | markdownify }}</a>
+{{ end }}
+{{ with .Site.Params.subtitle }}
+    <p class="mt0 pt0 mb0 pb0 f1 tc db">{{ . | markdownify }}</p>
+{{ end }}
 </header>
 

@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
-{{ partial "site-head.html" . }}
-    <body>
+{{ partial "head.html" . }}
+    <body class="">
     {{ partial "header.html" . }}
-    {{ partial "navbar.html" . }}
+    {{ partial "nav-big-button.html" . }}
 
     <!-- Biography Section -->
     {{ range where .Data.Pages "Type" "home" }}
-    {{ if eq .Title "about" }}
-    <article class="pa3 pa5-ns">
-    {{ .Content }}
+    {{ if eq .Title "(hu)manifesto" }}
+    <article class="mw7-ns center pa3 pa4-ns">
+	    <h1 class="tc underline">{{ .Title }}</h1>
+	    <div class="ttu b">
+	    {{ .Content }}
+	    </div>
     </article>
     {{ end }}
     {{ end }}
 
+    {{ partial "fht-script.html" .}}
     {{ partial "footer.html" . }}
     </body>
 </html>

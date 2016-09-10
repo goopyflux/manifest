@@ -1,0 +1,48 @@
+<head>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="theme" content="hugo-tachyons">
+    {{ .Hugo.Generator }}
+    {{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
+
+    <!-- FONTS -->
+    <link
+href="https://fonts.googleapis.com/css?family=Space+Mono|Cutive+Mono" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}css/normalize.css">
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}css/tachyons.min.css">
+    {{ range .Site.Params.custom_css }}
+    <link rel="stylesheet" href="{{ $.Site.BaseURL }}css/{{ . }}">
+    {{ end }}
+
+    <!-- Highlight.JS -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{{ .Site.BaseURL }}img/favicon.ico" type="image/x-icon">
+    <link rel="canonical" href="{{ .Permalink }}">
+
+    <title>{{ if not .IsHome }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
+
+    <!-- Custom Global CSS Styles -->
+    <style>
+        body {
+	  font-family: 'Avenir Next';
+	  background: #F4F4F4;
+	}
+	code {
+	  font-family: 'Cutive Mono','Space Mono';
+	  font-size: 1.25rem;
+	  font-weight: 600;
+	  line-height: 1.25;
+	}
+    </style>
+
+</head>
+
