@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
+{{ partial "site-head.html" . }}
+    <body>
+    {{ partial "header.html" . }}
+    {{ partial "navbar.html" . }}
+
+    <!-- Biography Section -->
+    {{ range where .Data.Pages "Type" "home" }}
+    {{ if eq .Title "about" }}
+    <article class="pa3 pa5-ns">
+    {{ .Content }}
+    </article>
+    {{ end }}
+    {{ end }}
+
+    {{ partial "footer.html" . }}
+    </body>
+</html>
