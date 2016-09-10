@@ -121,14 +121,6 @@ If you have modified files in `themes/manifest`, git will attempt to auto-merge 
 
 If there are any issues after upgrading, you may wish to compare your site with the latest [example site](https://github.com/goopyflux/manifest-demo/) to check if any settings changed.
 
-# Nothing is perfect...
-
-- [ ] Write content on usage, modifications and customization
-- [ ] Modify footer to support social links from config.toml
-- [ ] Spell check content (OMG! How could you?!) :D
-- [ ] In list view, the meta-data column (date, wordcount, read time) does not align vertically if the corresponding entry has no summary text
-- [ ] Move global `<style></style>` in `index.html` to a separate CSS file
-
 # Contributing
 
 Please use the [issue tracker](https://github.com/goopyflux/manifest/issues) to let me know about any bugs or feature requests, or alternatively make a pull request.
