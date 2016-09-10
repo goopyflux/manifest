@@ -3,9 +3,14 @@
 Manifest is a theme for the static site generator [Hugo](gohugo.io).
 
 > **Manifest**
-> man.i.fest
-> *adjective*
+>
+> man.i.fest (*adjective*)
+>
 > clear or obvious to the eye or mind
+
+# Demo
+
+View demo [here](https://goopyflux.github.io/manifest-demo/)
 
 # Design
 
@@ -82,7 +87,7 @@ This is my attempt to pay it forward.
 
 # Getting Started
 
-Refer to the [documentation](http://goopyflux.github.io/manifest-demo/posts) under the *Posts* section of the latest Manifest theme demo.
+More details coming soon...
 
 # Upgrading
 
@@ -114,7 +119,15 @@ Upgrade by running:
 
 If you have modified files in `themes/manifest`, git will attempt to auto-merge changes. If conflicts are reported, you will need to manually edit the files with conflicts and add them back (`git add <filename>`).
 
-If there are any issues after upgrading, you may wish to compare your site with the latest [example site](https://github.com/goopyflux/manifest/tree/master/exampleSite) to check if any settings changed.
+If there are any issues after upgrading, you may wish to compare your site with the latest [example site](https://github.com/goopyflux/manifest-demo/) to check if any settings changed.
+
+# Nothing is perfect...
+
+- [ ] Write content on usage, modifications and customization
+- [ ] Modify footer to support social links from config.toml
+- [ ] Spell check content (OMG! How could you?!) :D
+- [ ] In list view, the meta-data column (date, wordcount, read time) does not align vertically if the corresponding entry has no summary text
+- [ ] Move global `<style></style>` in `index.html` to a separate CSS file
 
 # Contributing
 
