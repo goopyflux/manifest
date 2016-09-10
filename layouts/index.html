@@ -5,9 +5,8 @@
     {{ partial "header.html" . }}
     {{ partial "nav-big-button.html" . }}
 
-    <!-- Biography Section -->
     {{ range where .Data.Pages "Type" "home" }}
-    {{ if eq .Title "(hu)manifesto" }}
+    {{ if eq .Title "fitter-happier" }}
     <article class="mw7-ns center pa3 pa4-ns">
 	    <h1 class="tc underline">{{ .Title }}</h1>
 	    <div class="ttu b">

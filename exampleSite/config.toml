@@ -1,0 +1,44 @@
+baseurl = "http://replace-this-with-your-website-url.com/"
+title = "Manifest"
+copyright = "&copy; 2016 Your Name"
+languageCode = "en-us"
+theme = "manifest"
+
+[params]
+  author = "goopyflux"
+  title = "Manifest"
+  subtitle = "A clean theme for Hugo"
+  name = "Goopy Flux"
+  email = "test@example.org"
+
+  # Date format (refer to Go's date format: http://flippinggodateformat.com )
+  #   Examples: "Mon, Jan 2, 2006" or "2006-01-02"
+  date_format = "Mon, Jan 2, 2006"
+
+  # Link custom CSS and JS assets (relative to /static/css and /static/js respectively)
+  custom_css = []
+  custom_js  = []
+
+  # Navigation Links
+  # The weight parameter defines the order that the links will appear in.
+
+  [[menu.main]]
+    name = "Posts"
+    url = "post/"
+    weight = 1
+
+  [[menu.main]]
+    name = "Projects"
+    url = "project/"
+    weight = 2
+
+  [[menu.main]]
+    name = "Publications"
+    url = "publication/"
+    weight = 3
+
+  [[menu.main]]
+    name = "About"
+    url = "home/about"
+    weight = 4
+
