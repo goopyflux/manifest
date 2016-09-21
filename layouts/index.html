@@ -3,19 +3,17 @@
 {{ partial "head.html" . }}
     <body class="">
     {{ partial "header.html" . }}
-    {{ partial "nav-big-button.html" . }}
-
+    {{ partial "nav-homepage.html" . }}
     {{ range where .Data.Pages "Type" "home" }}
     {{ if eq .Title "fitter-happier" }}
-    <article class="mw7-ns center pa3 pa4-ns">
-	    <h1 class="tc underline">{{ .Title }}</h1>
-	    <div class="ttu b">
-	    {{ .Content }}
-	    </div>
+    <article class="mw7 center pa3 pa4-ns black-80 tc">
+        <h1 class="underline fw6">{{ .Title }}</h1>
+	<div class="ttu fw5">
+	{{ .Content }}
+	</div>
     </article>
     {{ end }}
     {{ end }}
-
     {{ partial "fht-script.html" .}}
     {{ partial "footer.html" . }}
     </body>

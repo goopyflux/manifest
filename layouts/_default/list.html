@@ -3,22 +3,25 @@
 {{ partial "head.html" . }}
     <body class="">
     {{ partial "nav-slim-inline.html" .}}
-	<ul class="cf dt mt0 mb0 mw5 mw7-ns center list pl0">
+    <div class="mw7 center pa3 pa4-ns">
+    <h1 class="fw6 underline pl2 mt0">{{ .Title }}</h1>
+	<ul class="list pl0">
         {{ $paginator := .Paginate .Data.Pages }}
 	{{ range $paginator.Pages }}
-	  <li class="pa2 pa2-ns bb b--black-10">
-	    <div class="dtc w-65 pa3 v-top">
+	  <li class="pa2 bb b--black-10">
+	    <div class="db">
 	      <h1 class="ma0 black-80 fw6"><a class="link black-90 dim" href="{{ .Permalink }}">{{.Title }}</a></h1>
-	      <p class="lh-title black-90 f5 fw4">{{ .Summary }}</p>
+	      <p class="lh-title black-80 f5">{{ .Summary }}</p>
 	    </div>
-	    <div class="dtc w-20 pa3 v-top">
-	      <time>{{ dateFormat "02 Jan 2006" .Date }}</time>
-	      <p>{{ .WordCount}} words</p>
-	      <p>(~{{ .ReadingTime }} min read)</p> 
+	    <div class="db gray">
+	      <time class="dib pr3 ttu">{{ dateFormat "02 Jan 2006" .Date }}</time>
+	      <p class="dib pr3 ttu">{{ .WordCount}} words</p>
+	      <p class="dib pr3">(~{{ .ReadingTime }} min read)</p> 
 	    </div>
 	  </li>
         {{ end }}
-
+	</ul>
+    </div>
 	{{ partial "footer.html" . }}
     </body>
 </html>

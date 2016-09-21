@@ -1,9 +1,0 @@
-{{ $baseUrl := .Site.BaseURL }}
-<!--    <nav class="bt bb db dt-l w-100 border-box pa3 ph5-l">
-	<div class="db dtc-l v-mid w-100 w-75-c tc"> -->
-<nav class="center pv2 pv3-ns">
-    <ul class="input-reset list tc">
-    {{ range .Site.Menus.main }}
-    <li class="dib mr2"><a href="{{ $baseUrl }}{{ .URL }}" class="f4 f3-ns db pa2 link dim mid-gray br3 ba bg-black-80 white">{{ .Name }}</a></li>
-    {{ end }}
-</nav>
