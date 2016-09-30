@@ -70,7 +70,7 @@ cp -av themes/manifest/exampleSite/* .
 hugo server --watch
 ```
 
-Now you can go to [localhost:1313](http://localhost:1313) and your new Academic themed website should appear.
+Now you can go to [localhost:1313](http://localhost:1313) and your new Manifest themed website should appear.
 
 5. Customize your website (see next section), build it by running `hugo`, and deploy it by copying the `public/` directory (by FTP, Rsync, git push, etc.) to your production web server.
 
