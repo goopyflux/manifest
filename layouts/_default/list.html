@@ -4,19 +4,26 @@
     <body class="">
     {{ partial "nav-slim-inline.html" .}}
     <div class="mw7 center pa3 pa4-ns">
-    <h1 class="fw6 underline pl2 mt0">{{ .Title }}</h1>
+    <h1 class="f1 fw6 mt0">{{ .Title }}</h1>
 	<ul class="list pl0">
         {{ $paginator := .Paginate .Data.Pages }}
 	{{ range $paginator.Pages }}
 	  <li class="pa2 bb b--black-10">
 	    <div class="db">
 	      <h1 class="ma0 black-80 fw6"><a class="link black-90 dim" href="{{ .Permalink }}">{{.Title }}</a></h1>
-	      <p class="lh-title black-80 f5">{{ .Summary }}</p>
+	      <p class="lh-title black-80 f5 mb0">{{ .Summary }}</p>
 	    </div>
 	    <div class="db gray">
 	      <time class="dib pr3 ttu">{{ dateFormat "02 Jan 2006" .Date }}</time>
 	      <p class="dib pr3 ttu">{{ .WordCount}} words</p>
 	      <p class="dib pr3">(~{{ .ReadingTime }} min read)</p> 
+            {{ $baseurl := .Site.BaseURL }}
+	      <nav class="">
+	       <a class="f6 f5-ns b db link dim mid-gray dib" href="{{ $baseurl }}/tags/">Tags: </a> 
+              {{ range .Params.tags }}
+                <a class="f6 f5-ns db mr2 link dim mid-gray dib" href="{{ $baseurl }}/tags/{{ . | urlize }}">{{ . }}</a> 
+              {{ end }}
+              </nav>
 	    </div>
 	  </li>
         {{ end }}

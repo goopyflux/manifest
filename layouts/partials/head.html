@@ -20,9 +20,11 @@ href="https://fonts.googleapis.com/css?family=Space+Mono|Cutive+Mono" rel="style
     {{ end }}
 
     <!-- Highlight.JS -->
+    {{ if eq .Site.Params.UseHighlightJS true }}
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/github.min.css">
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
+    {{ end }}
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="{{ .Site.BaseURL }}img/favicon.ico" type="image/x-icon">
@@ -48,6 +50,10 @@ href="https://fonts.googleapis.com/css?family=Space+Mono|Cutive+Mono" rel="style
 	  border-width: .25rem;
 	  border-color: #AAAAAA;
 	  color: #777777;
+	}
+	h1, h2, h3, h4, h5, h6 {
+		font-weight: 500;
+	}
     </style>
 
 </head>

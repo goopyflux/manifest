@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
+{{ partial "head.html" . }}
+    <body class="">
+    {{ partial "nav-slim-inline.html" .}}
+    <div class="mw7 center pa3 pa4-ns">
+    <h1 class="f1 fw6 mt0">{{ .Title }}</h1>
+	<ul class="list pl0 ">
+	{{ $data := .Data }}
+	{{ range $key, $value := .Data.Terms }}
+	  <li class="dib mr2"><a class="f6 f4-ns db pa2 link black-90 br-pill ba white-90 bg-black-90 dim" href="{{ $data.Plural }}/{{ $key | urlize }}">{{ $key }} ({{ len $value }})</a> </li>
+	    {{ end }}
+	   </ul>
+	  </div>
+	</section>
+	{{ partial "footer.html" . }}
+    </body>
+</html>
+

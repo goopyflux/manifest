@@ -33,6 +33,7 @@ View demo [here](https://goopyflux.github.io/manifest-demo/)
 - Title, summary, wordcount and reading time in list view
 - Taxonomy using tags and categories
 - Multiple menus - one on home page; one in list and single views and one in the footer
+- Uses Highlight.js for syntax highlighting, which is optional and is controlled by the `UseHighlightJS` parameter in `config.toml`
 - Social icons integration
 
 # Why?
@@ -81,6 +82,7 @@ I had a vision for what the website should look like. It was made into a reality
 - The entire [Hugo](gohugo.io) community
 - The entire [Tachyons](tachyons.io) community
 - The [fitter-happier-text](https://github.com/jxnblk/fitter-happier-text) project
+- The [Highlight.js](https://highlightjs.org/) project
 - The [Hugo Academic](https://github.com/gcushen/hugo-academic) for content
 
 This is my attempt to pay it forward.
@@ -128,4 +130,5 @@ Please use the [issue tracker](https://github.com/goopyflux/manifest/issues) to 
 # License
 
 Released under the [MIT](https://github.com/goopyflux/manifest/blob/master/LICENSE.md) license.
+
 
