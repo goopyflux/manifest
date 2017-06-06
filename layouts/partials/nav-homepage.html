@@ -1,9 +1,10 @@
 {{ $baseUrl := .Site.BaseURL }}
+{{ $currentnode := . }}
 <!--    <nav class="bt bb db dt-l w-100 border-box pa3 ph5-l">
 	<div class="db dtc-l v-mid w-100 w-75-c tc"> -->
 <nav class="tc">
 {{ range .Site.Menus.main }}
-    <a href="{{ $baseUrl }}{{ .URL }}" class="db dib-ns mh3 pa2 link dim black-80 underline-hover f4 f3-ns fw5">{{ .Name }}</a>
+<a href="{{ $baseUrl }}{{ .URL }}" class="{{if $currentnode.IsMenuCurrent "main" . }}underline {{end}}db dib-ns mh3 pa2 link dim black-80 underline-hover f4 f3-ns fw5">{{ .Name }}</a>
 {{ end }}
 </nav>
 

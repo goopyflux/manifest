@@ -4,7 +4,7 @@
     <body class="">
     {{ partial "header.html" . }}
     {{ partial "nav-homepage.html" . }}
-    {{ range where .Data.Pages "Type" "home" }}
+    {{ range .Data.Pages }}
     {{ if eq .Title "fitter-happier" }}
     <article class="mw7 center pa3 pa4-ns black-80 tc">
         <h1 class="underline fw6">{{ .Title }}</h1>
