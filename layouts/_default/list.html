@@ -2,7 +2,9 @@
 <html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
 {{ partial "head.html" . }}
     <body class="">
-    {{ partial "nav-slim-inline.html" .}}
+    <!--    {{ partial "nav-slim-inline.html" .}} -->
+    {{ partial "header.html" . }}
+    {{ partial "nav-homepage.html" . }}
     <div class="mw7 center pa3 pa4-ns">
     <h1 class="f1 fw6 mt0">{{ .Title }}</h1>
 	<ul class="list pl0">
