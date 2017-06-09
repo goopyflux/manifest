@@ -1,3 +1,4 @@
+{{ $baseUrl := .Site.BaseURL }}
 <footer class="pv4 ph3 ph5-ns tc black-80">
   <a class="link dim mid-gray dib br-100 h2 w2 mr3 pa2 bg-near-white ba b--black-50" href="https://github.com/goopyflux/manifest" title="">
     <svg data-icon="github" viewBox="0 0 32 32" style="fill:currentcolor">
@@ -25,8 +26,8 @@
   </a>
   <small class="mt3 f6 db tc black-80 fw5">© 2016 <b class="ttu">SOME COMPANY Inc</b>., All Rights Reserved</small>
   <div class="tc mt3 f6 fw5"> 
-      <a href="#" title="Language" class="dib ph2 link black-80 dim">Language</a>
-      <a href="#"    title="Terms" class="dib ph2 link black-80 dim">Terms of Use</a>
-      <a href="#"  title="Privacy" class="dib ph2 link black-80 dim">Privacy</a>
+	  <a href="{{ $baseUrl }}about" title="Language" class="dib ph2 link black-80 dim">About</a>
+	  <a href="{{ $baseUrl }}#"    title="Terms" class="dib ph2 link black-80 dim">Terms of Use</a>
+	  <a href="{{ $baseUrl }}#"  title="Privacy" class="dib ph2 link black-80 dim">Privacy</a>
     </div>
 </footer>
